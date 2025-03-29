@@ -60,3 +60,8 @@ Los procesos de indexing de los nb almacenan un log de errores en un archivo jso
 - **Testing**
 
 Se incluye en los nbs 2 y 3 celdas para poder probar la funcionalidad de las funciones de busqueda
+
+**5 Valor agregado**
+
+- Se incluye la estructura basica para despliegue usando docker
+- Se incluye funcion para reduccion de dimensiones que se puede usar para embeddings más complejos

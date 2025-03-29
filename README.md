@@ -98,9 +98,14 @@ y desarrollo de APIs usando Flask.
 
 **2)Descargar base Amazon-Products y ubicarla en carpeta raw, descargar (preferiblemente) base con embeddings para no tener que generarlos**
 
-Opcion 1: Repo Kaggle:https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset?select=All+Electronics.csv
+Para descargar db: Repo Kaggle:https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset?select=All+Electronics.csv
 
-Opción 2: Drive 
+Una ves descomprimida la información, solo es necesario copiar Amazon-Products.csv a la direccion del proyecto data/raw
+
+Para descargar parquet con embeddings entrenados: Repo OneDrive FR:
+https://1drv.ms/u/c/53381e3f7b811bc4/Ed-y58FZkKxPo4P8D6AF0tUBK3cqU7Ahkywfo50gsxxy3Q?e=mtQHQU
+
+Una ves descargado el archivo se debe colocar en la dirección data/processed del proyecto 
 
 **3) Revisar/Ejecutar Preprocesamiento e Ingesta (Notebook 1)**
 - Carga y procesa df.
@@ -121,5 +126,18 @@ Opción 2: Drive
 Utiliza las funciones **/search:**  y **similar_products** desarollados en los nbs 2 y 3 respectivamente.
 Se puede ejecutar en bash con python app.py
 
+
+### 📌 **Opción 2: Ejecutar con Docker**
+Este método permite correr la aplicación completa en un ambiente Dockerizado, asegurando compatibilidad y facilitando el despliegue.
+
+**Pasos para ejecutar con Docker:**
+- 1)Construir e iniciar los contenedores con Docker Compose:
+docker-compose up --build
+Esperar a que ambos servicios se inicien correctamente:
+
+Flask App: estará disponible en http://localhost:5000.
+Elasticsearch: se desplegará en http://localhost:9200.
+
+- **2)Probar los endpoints:**
 
 
