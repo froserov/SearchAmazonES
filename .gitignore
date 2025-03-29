@@ -1,0 +1,30 @@
+# Ignorar archivos temporales o compilados
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar archivos generados
+*.npy
+*.parquet
+
+# Ignorar archivos CSV en general
+*.csv
+
+# Permitir archivos CSV pequeños en data/raw
+!data/raw/*.csv
+
+# Ignorar específicamente el archivo grande de Amazon Products
+data/raw/Amazon-Products.csv
+
+# Ignorar archivos de configuración privada
+.env
+
+# Asegurar que se mantengan las carpetas 'data', 'data/raw' y 'data/processed'
+!data/
+!data/raw/
+!data/processed/
+
+# Incluir archivos de texto vacíos para asegurar que Git registre las carpetas
+data/.gitkeep
+data/raw/.gitkeep
+data/processed/.gitkeep

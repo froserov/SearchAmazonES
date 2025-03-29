@@ -1,0 +1,9 @@
+tf-keras
+tensorflow==2.12
+transformers
+sentence-transformers
+Flask
+elasticsearch
+pandas
+numpy
+umap-learn
